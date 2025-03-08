@@ -1,0 +1,57 @@
+.visa-container {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .visa-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .visa-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .visa-group {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .visa-input, .visa-select, .visa-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .visa-textarea {
+    height: 80px;
+    resize: none;
+  }
+  
+  .visa-file-input {
+    border: none;
+  }
+  
+  .visa-submit {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .visa-submit:hover {
+    background: #0056b3;
+  }
+  

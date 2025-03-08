@@ -1,0 +1,318 @@
+/* Footer.css - Comprehensive Styling */
+
+/* General Footer Styles */
+.footer {
+    background: #0b132b;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    padding: 60px 20px; /* Increased padding */
+    min-height: 500px; /* Increased min-height */
+    text-align: center; /* Removed text-align: center from here */
+}
+
+/* Separate main content area of the footer */
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Distribute space evenly */
+    align-items: flex-start; /* Align items to the top */
+    max-width: 1200px; /* Maximum width for the content */
+    margin: 0 auto; /* Center the content */
+    padding: 20px;
+}
+
+/* Individual column styling for the footer */
+.footer-left,
+.footer-middle,
+.footer-right {
+    flex: 1; /* Take up equal space */
+    padding: 20px;
+    text-align: left; /* Align text to the left */
+}
+
+/* Footer Logo and Quote */
+.footer-left .quote {
+    font-style: italic;
+    font-size: 1rem; /* Adjust size as needed */
+    margin-bottom: 15px;
+    color: #ddd; /* Slightly lighter text for the quote */
+}
+
+.footer-left p {
+    line-height: 1.6;
+    opacity: 0.8;
+    font-size: 0.9rem; /* Reduce font size for better readability */
+}
+
+
+/* Quick Links List */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    display: block; /* Make links fill the li for easier clicking */
+    padding: 5px 0;
+}
+
+.footer-links a:hover {
+    color: #00c6ff;
+    transform: translateX(5px); /* Add slight movement on hover */
+}
+
+/* Footer Right (Contact Info) */
+.footer-right p {
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+/* Particle Effects */
+.footer-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30%; /* Adjust height of top section */
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    width: 5px; /* Slightly larger */
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.5); /* More visible particles */
+    border-radius: 50%;
+    animation: float 6s linear infinite; /* Adjust speed and make it slower */
+    bottom: 0;
+    pointer-events: none;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) translateX(0); /* Start from bottom and center */
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.8;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-400px) translateX(20px); /* More variation in direction */
+        opacity: 0;
+    }
+}
+
+/* Keyframe animation for Visa Cards */
+@keyframes rotateVisa {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Visa Card Styling */
+.visa-card {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px; /* Adjust size */
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0; /* Start invisible */
+    animation: floatVisa 5s linear infinite, rotateVisa 10s linear infinite;
+    pointer-events: none; /* Not interactable */
+    transform: translate(-50%, -50%);
+}
+
+/* Keyframe animation for floating effect */
+@keyframes floatVisa {
+  0% {
+    transform: translateY(0) translateX(0) translate(-50%, -50%); /* Starting position */
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-400px) translateX(10vw) translate(-50%, -50%); /* End higher up with random X */
+    opacity: 0;
+  }
+}
+/* Glowing Effect on Hover */
+.social-icon:hover {
+    transform: rotate(360deg) scale(1.2);
+    box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.8);
+}
+
+.social-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #00c6ff, #0072ff, #00c6ff);
+    z-index: -1;
+    background-size: 300%;
+    border-radius: 50%;
+    animation: borderAnimation 4s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.social-icon:hover::before {
+    opacity: 1;
+}
+
+
+@keyframes borderAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Social Icons */
+.social-icons {
+    margin: 20px 0;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    font-size: 28px;
+    color: #ffffff;
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55), box-shadow 0.5s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Bottom Section */
+.footer-bottom {
+    padding: 20px;
+    font-size: 14px;
+    opacity: 0.7;
+    border-top: 1px solid rgba(255,255,255,0.1); /* Add a subtle top border */
+}
+
+.designedBy a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack columns on smaller screens */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .footer-left,
+    .footer-middle,
+    .footer-right {
+        width: 100%; /* Each column takes full width */
+        text-align: center; /* Center text in each column */
+    }
+
+    .social-icons {
+        justify-content: center; /* Center social icons */
+    }
+}
+.footer-left img{
+    height: 180px;
+}
+.logoMarqueeSection{
+    margin-top:15px ;
+}
+  #logoMarqueeSection {
+    max-width: 1920px!important;
+    margin: 0 auto;
+  }
+  
+  .default-content-container {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0;
+      margin-bottom: 0;
+      /* padding-left: 5rem; */
+      padding-right: 5rem;
+      padding-top: 4.5rem;
+      padding-bottom: 4.5rem;
+      width: 100%;
+      min-height: 100vh;
+  }
+  
+  div.marquee>a>img {
+    height: 120px;
+  }
+  
+  .logoMarqueeSection>div>div {
+      padding-top: 0;
+      padding-bottom: 0;
+      min-height: 0;
+  }
+  
+  .marquee-wrapper {
+    display:  inline-block;
+    white-space: nowrap;
+  }
+  
+  .marquee {
+      display:  inline-block;
+      white-space: nowrap;
+      position: relative;
+      transform: translate3d(0%, 0, 0);
+      animation-name: marquee;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+  }
+  
+  .marquee a {
+      display:  inline-block;
+      white-space: nowrap;
+      padding-right: 5.4rem;
+  }
+  
+  .marquee-wrapper:hover .marquee {
+      animation-play-state: paused !important;
+  }
+  
+  @keyframes marquee {
+      0% {
+          transform: translate3d(0%, 0, 0);
+      }
+  
+      100% {
+          transform: translate3d(-100%, 0, 0);
+      }
+  }
+  .logo-footer img{
+    height: 200px;
+  }

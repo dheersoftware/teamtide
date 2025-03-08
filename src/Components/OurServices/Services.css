@@ -1,0 +1,265 @@
+.tide-visa-services-page {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+    background: #f8f9fa;
+}
+
+.tide-visa-services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+
+
+.tide-visa-services-header {
+    background: linear-gradient(to right, #3498db, #2980b9);
+    color: #fff;
+    text-align: center;
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+    height: 600px; 
+}
+
+.tide-visa-services-header-content {
+    position: relative;
+    z-index: 2;
+}
+
+.tide-visa-services-header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.tide-visa-services-header-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('') center/cover no-repeat fixed;
+    opacity: 0.4;
+    z-index: 0;
+    transform: translateZ(-1px) scale(1.2); 
+    backface-visibility: hidden; 
+}
+
+.tide-visa-services-scroll-button {
+    display: inline-block;
+    background-color: #e67e22;
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.tide-visa-services-scroll-button:hover {
+    background-color: #d35400;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.tide-visa-services-about {
+    padding: 80px 0;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden; 
+}
+
+.tide-visa-services-about-content {
+    margin-bottom: 30px;
+}
+
+.tide-visa-services-about-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.tide-visa-services-about-image img:hover {
+    transform: scale(1.03);
+}
+
+.tide-visa-services-section {
+    padding: 80px 0;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+.tide-visa-services-section-title {
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+.tide-visa-services-section-description {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.tide-visa-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.tide-visa-service-item {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.tide-visa-service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.tide-visa-service-icon {
+    font-size: 3rem;
+    color: #3498db;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.tide-visa-service-item:hover .tide-visa-service-icon {
+    transform: rotate(30deg);
+}
+
+.tide-visa-service-name {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.tide-visa-service-description {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.tide-visa-services-expanded {
+    padding: 80px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.tide-visa-services-details {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #f2f2f2;
+}
+
+.tide-visa-services-reasons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.tide-visa-services-reason {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.tide-visa-services-reason:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.tide-visa-services-reason-icon {
+    font-size: 2.5rem;
+    color: #27ae60;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.tide-visa-services-reason:hover .tide-visa-services-reason-icon {
+    transform: scale(1.2);
+}
+
+.tide-visa-services-reason h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.tide-visa-services-reason p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.tide-visa-services-more-info {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 40px;
+}
+
+.tide-visa-services-cta {
+    padding: 100px 0;
+    background: linear-gradient(to right, #3498db, #2980b9);
+    color: #fff;
+    text-align: center;
+}
+
+.tide-visa-services-cta-button {
+    display: inline-block;
+    background-color: #e67e22;
+    color: #fff;
+    padding: 16px 40px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 30px;
+}
+
+.tide-visa-services-cta-button:hover {
+    background-color: #d35400;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .tide-visa-services-container {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    .tide-visa-services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tide-visa-services-reasons {
+        grid-template-columns: 1fr;
+    }
+}

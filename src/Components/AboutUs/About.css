@@ -1,0 +1,692 @@
+/* About.css */
+
+.tide-about-section {
+    background: linear-gradient(45deg, #f0f0f0, #e0e0e0); /* Soft gradient background */
+    padding: 10px;
+    font-family: 'Arial', sans-serif;
+    position: relative; /* For the animated background */
+    overflow: hidden; /* Hide the overflow from the animation */
+}
+
+.tide-container {
+   
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent container */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    position: relative;
+    z-index: 1; /* Ensure content is above the animated background */
+}
+
+.tide-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://img.freepik.com/premium-photo/passport-world-map-camera-travel-concept_78806-264.jpg?ga=GA1.1.1425276390.1739774418&semt=ais_hybrid'); /* Replace with your pattern */
+    opacity: 0.1; /* Lighten the pattern */
+    z-index: -1;
+    pointer-events: none; /* Prevent interaction */
+}
+
+.tide-content-wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: center; /* Vertically center the content */
+}
+
+.tide-text-content {
+    flex: 1;
+    padding-right: 20px;
+    position: relative;
+    animation: slideInLeft 1.5s ease-out; /* Overall slide-in animation for the image section */
+}
+
+.tide-text-content::before {
+    content: '✨'; /* Add a decorative sparkle */
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    font-size: 2em;
+    color: gold;
+    animation: rotateSparkle 5s linear infinite;
+}
+
+/* Keyframes for the sparkle rotation */
+@keyframes rotateSparkle {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.tide-text-content h3 {
+    font-size: 2em;
+    color: #23a6d5; /* Deep purple */
+    margin-bottom: 15px;
+    font-family: 'Georgia', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    opacity: 0; /* Initially hidden */
+    transform: translateY(-20px); /* Move it up a bit */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
+}
+
+/* Animate heading */
+.tide-text-content h3.animate-heading {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tide-text-content h1 {
+    font-size: 3em;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.tide-features {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.tide-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #444;
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.tide-feature-item:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+.tide-feature-icon {
+    color: #23a6d5;
+    font-size: 1.4em;
+    margin-right: 5px;
+    animation: pulseIcon 2s linear infinite; /* Pulse animation */
+}
+
+/* Keyframes for pulse animation */
+@keyframes pulseIcon {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.tide-funky-paragraph {
+    font-size: 1.2em;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 30px;
+    font-family: 'Lora', serif;
+    text-align: justify; /* Justify the text */
+    hyphens: auto; /* Enable hyphenation */
+    animation: fadeIn 2s ease-out; /* Fade in animation */
+}
+
+/* Keyframes for fade in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.tide-image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    width: 900px;
+    animation: slideInRight 1.5s ease-out; /* Overall slide-in animation for the image section */
+}
+
+.tide-image-grid-item {
+    width: 100%;
+    height: 260px; /* Fixed height for a uniform look */
+    border-radius: 10px;
+    object-fit: cover; /* Cover the area, cropping if necessary */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.tide-image-grid-item:hover {
+    transform: translateY(-5px); /* Slightly move up on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* More Hover Effects: */
+.tide-image-hover-effect {
+    position: relative;
+    overflow: hidden; /* Hide the overflow */
+}
+
+/* Create an overlay */
+.tide-image-hover-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Dark overlay */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.4s ease;
+}
+
+.tide-image-hover-effect:hover::before {
+    opacity: 1; /* Show overlay on hover */
+}
+
+/* Zoom Effect: */
+.tide-image-hover-effect {
+    transition: transform 0.4s ease;
+}
+
+.tide-image-hover-effect:hover {
+    transform: scale(1.1); /* Slightly zoom in */
+}
+
+/*Tilt Effect */
+.tide-image-hover-effect {
+    perspective: 1000px; /* Define perspective */
+}
+
+.tide-image-hover-effect:hover {
+    transform: rotateX(10deg) rotateY(10deg) scale(1.1); /* Apply the tilt */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tide-content-wrapper {
+        flex-direction: column;
+    }
+
+    .tide-image-grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+}
+
+/* Crazy Background Animation */
+.tide-about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        #ee7752,
+        #23a6d5,
+        #e73c7e,
+        #23d5ab
+    );
+    z-index: 0;
+    animation: crazyBackground 15s linear infinite;
+    opacity: 0.3; /* Reduce opacity to not overwhelm the design */
+}
+
+/* Keyframes for crazy background animation */
+@keyframes crazyBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* Breadcrumb.css */
+.tide-breadcrumb-container {
+    width: 100%;
+    height: 450px; /* Increased height for better visual impact */
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.tide-breadcrumb-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 1s ease-in-out;
+    animation: kenburns 20s ease-out infinite alternate;
+}
+
+/* Ken Burns Effect Animation */
+@keyframes kenburns {
+    0% {
+        transform: scale(1.1) translateY(-10px) translateX(-5px); /* Slight horizontal movement */
+    }
+    100% {
+        transform: scale(1.2) translateY(10px) translateX(5px);
+    }
+}
+
+.tide-breadcrumb-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)); /* Gradient overlay */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 30px; /* Increased padding */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Deeper text shadow */
+}
+
+.tide-breadcrumb-title {
+    font-size: 3.5em; /* Increased font size for prominence */
+    font-weight: 700; /* Slightly bolder font */
+    font-family: 'Oswald', sans-serif; /* Modern, international font */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: fadeIn 1s ease-out;
+    margin-bottom: 10px; /* Space below the title */
+}
+
+.tide-breadcrumb-tagline {
+    font-size: 1.4em;
+    font-style: italic;
+    font-family: 'Merriweather', serif; /* Elegant, readable font */
+    margin-bottom: 15px;
+    animation: fadeIn 1.2s ease-out;
+}
+
+.tide-breadcrumb-description {
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto 20px; /* Centered and spaced below */
+    animation: fadeInUp 1.4s ease-out;
+}
+
+.tide-breadcrumb-path {
+    font-size: 1em;
+    animation: fadeInUp 1.6s ease-out;
+}
+
+.tide-breadcrumb-path a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.tide-breadcrumb-path a:hover {
+    color: white;
+}
+
+.tide-breadcrumb-current {
+    color: #bbb; /* Muted current path color */
+}
+
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px); /* Increased distance */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tide-breadcrumb-container {
+        height: 400px;
+    }
+
+    .tide-breadcrumb-title {
+        font-size: 2.5em;
+    }
+
+    .tide-breadcrumb-tagline {
+        font-size: 1.2em;
+    }
+
+    .tide-breadcrumb-description {
+        font-size: 1em;
+    }
+
+    .tide-breadcrumb-path {
+        font-size: 0.9em;
+    }
+}
+/* CompanySection.css */
+
+.tide-company-section {
+    padding: 10px; /* Increased for more breathing room */
+    background-color: #f9f9f9; /* Very light background */
+}
+
+.tide-new-layout {
+    display: flex;
+    justify-content: space-between; /* Distribute content evenly */
+    align-items: center; /* Vertically center content */
+    gap: 40px; /* Space between text and images */
+}
+
+.tide-company-container {
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    background-color: #fff; /* White background */
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 60px; /* More padding inside */
+    position: relative;
+}
+
+.tide-company-text {
+    flex: 1; /* Take up available space */
+    padding-right: 40px; /* Add space between text and images */
+    animation: slideInRight 1.5s ease-out; /* Overall slide-in animation for the image section */
+}
+
+.tide-company-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #777; /* Muted color for "About The Company" */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.tide-company-providing {
+    font-size: 3em;
+    font-weight: 700;
+    color: #333; /* Dark, prominent color */
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.tide-company-providing span {
+    color: #56A0D1; /* Orange for "services" */
+}
+
+.tide-company-tagline {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.tide-company-description {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.tide-company-info-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f0f6ff; /* Light blue */
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.tide-company-services {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.tide-service-icon {
+    font-size: 2.5em;
+    color: #ff9900;
+}
+
+.tide-company-service-title {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.tide-company-service-description {
+    font-size: 1em;
+    color: #555;
+}
+
+.tide-company-button {
+    background-color: #007bff; /* Blue */
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3); /* Light blue shadow */
+}
+
+.tide-company-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 86, 179, 0.3);
+}
+
+/* Images Section */
+.tide-company-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    width: 45%; /* Adjust the width to control size */
+    position: relative;
+    animation: slideInLeft 1.5s ease-out; /* Overall slide-in animation for the image section */
+}
+
+.tide-company-image-wrapper {
+    overflow: hidden; /* Hide the overflow */
+    position: relative; /* For pseudo-element animations */
+    border-radius: 10px; /* Round the corners */
+    transition: all 0.3s ease;
+    animation: scaleAndRotate 5s linear infinite alternate; /* Apply animation to image wrappers */
+
+}
+/* Animate images to move */
+@keyframes scaleAndRotate {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        transform: scale(1.1) rotate(5deg);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+.tide-company-image {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    padding: 8px;
+    border-radius: 10px;
+    transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
+    filter: grayscale(40%); /* Optional grayscale effect */
+    animation: tiltAndFloat 5s linear infinite alternate, subtlePulse 6s linear infinite alternate;
+}
+.tide-company-image:hover {
+    transform: scale(1.1);
+    filter: grayscale(0); /* Remove grayscale on hover */
+}
+
+.tide-rounded-image {
+    border-radius: 20px; /* Make the images rounded */
+}
+
+/* Stats Section */
+.tide-company-stats {
+    position: absolute;
+    bottom: -30px; /* Position slightly below */
+    right: 10px;
+    background-color: #fff; /* White background */
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3); /* Blue shadow */
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 250px; /* Fixed width */
+    animation: slideInUp 1s ease-out;
+}
+
+.tide-company-stats-content {
+    text-align: left;
+}
+
+.tide-company-stats-number {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    line-height: 1;
+}
+
+.tide-company-stats-text {
+    font-size: 1em;
+    color: #555;
+}
+
+.tide-company-stats-icon {
+    font-size: 2.5em;
+    color: #007bff;
+}
+    
+/* Slide In Up Animation */
+@keyframes slideInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Image Hover Effect */
+.tide-company-image-wrapper:hover .tide-company-image {
+    transform: scale(1.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .tide-new-layout {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .tide-company-text {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+
+    .tide-company-services {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tide-company-info-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tide-company-images {
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+    }
+
+    .tide-company-image {
+        height: 250px; /* Adjusted for better visibility on smaller screens */
+    }
+
+    .tide-company-stats {
+        position: static;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tide-company-stats-content {
+        text-align: center;
+    }
+}
+/* Keyframe animations */
+@keyframes tiltAndFloat {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(3deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+@keyframes subtlePulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
